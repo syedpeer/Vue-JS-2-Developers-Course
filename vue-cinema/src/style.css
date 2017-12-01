@@ -1,0 +1,294 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #232323;
+  color: #fff;
+  padding: 0;
+  margin: 0; }
+  body #app, html #app {
+    background-color: #3F3F3F;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    body #app #title, html #app #title {
+      padding: 2rem 0 1rem 2rem;
+      display: flex;
+      align-items: center; }
+      body #app #title img, html #app #title img {
+        width: 90px;
+        height: 90px;
+        display: inline-block; }
+      body #app #title h1, html #app #title h1 {
+        display: inline-block;
+        font-family: 'Orbitron', sans-serif;
+        margin: 0;
+        padding: 0 0 0 1rem;
+        font-size: 2.5rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        user-select: none; }
+      @media screen and (max-width: 800px) {
+        body #app #title img, html #app #title img {
+          width: 50px;
+          height: 50px; }
+        body #app #title h1, html #app #title h1 {
+          font-size: 1.5rem; } }
+    body #app #day-select .days, html #app #day-select .days {
+      margin: 0;
+      list-style-type: none;
+      cursor: pointer;
+      background: #232323;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 100%;
+      padding: 0; }
+      @media screen and (max-width: 800px) {
+        body #app #day-select .days, html #app #day-select .days {
+          justify-content: space-between; } }
+      body #app #day-select .days .day, html #app #day-select .days .day {
+        display: inline;
+        color: #fff;
+        padding: 1rem;
+        user-select: none;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden; }
+        body #app #day-select .days .day:hover, html #app #day-select .days .day:hover {
+          background-color: #2b2b2b; }
+        body #app #day-select .days .day.active, html #app #day-select .days .day.active {
+          color: #b50010;
+          text-decoration: underline;
+          background-color: #161616; }
+        @media screen and (max-width: 800px) {
+          body #app #day-select .days .day, html #app #day-select .days .day {
+            display: none; }
+            body #app #day-select .days .day.active, html #app #day-select .days .day.active {
+              display: inline; } }
+      body #app #day-select .days .day-selector, html #app #day-select .days .day-selector {
+        display: none; }
+        @media screen and (max-width: 800px) {
+          body #app #day-select .days .day-selector, html #app #day-select .days .day-selector {
+            display: inline-flex;
+            justify-content: space-between;
+            width: 80px;
+            color: #fff;
+            user-select: none;
+            font-weight: bold;
+            padding: 0; }
+            body #app #day-select .days .day-selector span, html #app #day-select .days .day-selector span {
+              width: 40px;
+              font-size: 3rem;
+              position: relative; }
+              body #app #day-select .days .day-selector span:after, html #app #day-select .days .day-selector span:after {
+                position: absolute;
+                left: 5px;
+                bottom: -6px; }
+              body #app #day-select .days .day-selector span:hover, html #app #day-select .days .day-selector span:hover {
+                background-color: #2b2b2b; } }
+        body #app #day-select .days .day-selector .dec:after, html #app #day-select .days .day-selector .dec:after {
+          content: '<'; }
+        body #app #day-select .days .day-selector .inc:after, html #app #day-select .days .day-selector .inc:after {
+          content: '>'; }
+    body #app .movie, html #app .movie {
+      display: flex;
+      margin-bottom: 2rem; }
+      body #app .movie .movie-col-left img, html #app .movie .movie-col-left img {
+        height: 250px;
+        display: block; }
+        @media screen and (max-width: 800px) {
+          body #app .movie .movie-col-left img, html #app .movie .movie-col-left img {
+            height: 150px; } }
+      body #app .movie .movie-col-right, html #app .movie .movie-col-right {
+        padding-left: 1rem; }
+        body #app .movie .movie-col-right .movie-title, html #app .movie .movie-col-right .movie-title {
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap; }
+          body #app .movie .movie-col-right .movie-title h2, html #app .movie .movie-col-right .movie-title h2 {
+            color: #ffa624;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin-right: 0.5rem; }
+          body #app .movie .movie-col-right .movie-title .movie-rating, html #app .movie .movie-col-right .movie-title .movie-rating {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            background-color: #b50010;
+            line-height: 1.5rem;
+            padding: 0.3rem 0.5rem 0.2rem;
+            font-weight: bold;
+            user-select: none;
+            white-space: nowrap;
+            overflow: hidden; }
+          @media screen and (max-width: 800px) {
+            body #app .movie .movie-col-right .movie-title h2, html #app .movie .movie-col-right .movie-title h2 {
+              font-size: 1.25rem;
+              line-height: 1.25rem; }
+            body #app .movie .movie-col-right .movie-title .movie-rating, html #app .movie .movie-col-right .movie-title .movie-rating {
+              font-size: 0.8rem;
+              line-height: 1rem;
+              padding: 0.2rem 0.35rem 0.1rem; } }
+    body #app #overview, html #app #overview {
+      padding: 0 2rem; }
+      body #app #overview .main, html #app #overview .main {
+        display: flex; }
+        @media screen and (max-width: 800px) {
+          body #app #overview .main, html #app #overview .main {
+            flex-direction: column; } }
+        body #app #overview .main #movie-list, html #app #overview .main #movie-list {
+          flex-basis: 75%; }
+        body #app #overview .main #movie-filter, html #app #overview .main #movie-filter {
+          flex-basis: 25%; }
+          @media screen and (max-width: 800px) {
+            body #app #overview .main #movie-filter, html #app #overview .main #movie-filter {
+              order: -1; } }
+    body #app #movie-list, html #app #movie-list {
+      padding-top: 2rem; }
+      body #app #movie-list .movie, html #app #movie-list .movie {
+        border-bottom: ridge 2px #6e6e6e;
+        padding-bottom: 2rem; }
+        body #app #movie-list .movie .movie-col-right .movie-sessions .session-time-wrapper, html #app #movie-list .movie .movie-col-right .movie-sessions .session-time-wrapper {
+          float: left; }
+          body #app #movie-list .movie .movie-col-right .movie-sessions .session-time-wrapper .session-time, html #app #movie-list .movie .movie-col-right .movie-sessions .session-time-wrapper .session-time {
+            background-color: #6e6e6e;
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            user-select: none;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            white-space: nowrap; }
+            @media screen and (max-width: 800px) {
+              body #app #movie-list .movie .movie-col-right .movie-sessions .session-time-wrapper .session-time, html #app #movie-list .movie .movie-col-right .movie-sessions .session-time-wrapper .session-time {
+                padding: 0.35rem;
+                font-size: 0.8rem; } }
+      body #app #movie-list .no-results, html #app #movie-list .no-results {
+        color: white;
+        font-weight: bold;
+        font-size: 1.25rem;
+        padding-bottom: 2rem; }
+    body #app #movie-filter, html #app #movie-filter {
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      padding-left: 2rem; }
+      @media screen and (max-width: 800px) {
+        body #app #movie-filter, html #app #movie-filter {
+          padding-bottom: 2rem;
+          margin-bottom: 0;
+          padding-left: 0;
+          border-bottom: ridge 2px #6e6e6e;
+          font-size: 1rem; } }
+      body #app #movie-filter h2, html #app #movie-filter h2 {
+        border-bottom: 3px solid #fff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
+      body #app #movie-filter h3, html #app #movie-filter h3 {
+        margin: 2rem 0 0 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
+      body #app #movie-filter .filter-group, html #app #movie-filter .filter-group {
+        display: flex;
+        flex-direction: column; }
+        @media screen and (max-width: 800px) {
+          body #app #movie-filter .filter-group, html #app #movie-filter .filter-group {
+            flex-direction: row;
+            flex-wrap: wrap; } }
+        body #app #movie-filter .filter-group .check-filter, html #app #movie-filter .filter-group .check-filter {
+          color: #dcdcdc;
+          cursor: pointer;
+          margin-top: 0.5rem;
+          margin-right: 1rem;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          display: flex;
+          flex-direction: row; }
+          @media screen and (max-width: 800px) {
+            body #app #movie-filter .filter-group .check-filter, html #app #movie-filter .filter-group .check-filter {
+              width: 150px; } }
+          body #app #movie-filter .filter-group .check-filter:hover, html #app #movie-filter .filter-group .check-filter:hover {
+            color: #fff; }
+            body #app #movie-filter .filter-group .check-filter:hover .checkbox, html #app #movie-filter .filter-group .check-filter:hover .checkbox {
+              border-color: #fff; }
+          body #app #movie-filter .filter-group .check-filter.active, html #app #movie-filter .filter-group .check-filter.active {
+            color: #fff; }
+            body #app #movie-filter .filter-group .check-filter.active .checkbox::after, html #app #movie-filter .filter-group .check-filter.active .checkbox::after {
+              content: '';
+              border-color: #fff;
+              background-color: #ffa624;
+              position: absolute;
+              width: 14px;
+              height: 14px;
+              left: 3px;
+              top: 3px;
+              border-radius: 2px; }
+          body #app #movie-filter .filter-group .check-filter .checkbox, html #app #movie-filter .filter-group .check-filter .checkbox {
+            display: inline-block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            user-select: none;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); }
+          body #app #movie-filter .filter-group .check-filter .check-filter-title, html #app #movie-filter .filter-group .check-filter .check-filter-title {
+            user-select: none;
+            vertical-align: top;
+            line-height: 1.6rem;
+            padding-left: 0.45rem; }
+    body #app #detail, html #app #detail {
+      padding: 0 2rem;
+      padding-bottom: 2rem; }
+      body #app #detail .home, html #app #detail .home {
+        padding: 1rem 0;
+        margin-bottom: 1rem; }
+        body #app #detail .home a, html #app #detail .home a {
+          border-top: 2px solid white;
+          color: white;
+          text-decoration: none;
+          font-size: 1.25rem;
+          padding: 0.5rem 0; }
+      body #app #detail .movie .movie-details, html #app #detail .movie .movie-details {
+        color: #fff; }
+        body #app #detail .movie .movie-details .movie-genre, html #app #detail .movie .movie-details .movie-genre {
+          font-weight: bold; }
+        body #app #detail .movie .movie-details table tr td, html #app #detail .movie .movie-details table tr td {
+          vertical-align: top; }
+        body #app #detail .movie .movie-details table tr td:first-child, html #app #detail .movie .movie-details table tr td:first-child {
+          font-weight: bold;
+          padding-right: 0.5rem; }
+
+.tooltip-wrapper {
+  position: relative; }
+  .tooltip-wrapper .tooltip {
+    display: none; }
+    .tooltip-wrapper .tooltip.tooltip-show {
+      text-align: center;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 9rem;
+      transform: translate(-5.5rem, 50px);
+      background-color: #141414;
+      color: white;
+      padding: 1rem;
+      z-index: 10; }
+      @media screen and (max-width: 800px) {
+        .tooltip-wrapper .tooltip.tooltip-show {
+          width: 9rem;
+          transform: translate(-5.5rem, 40px); } }
+    .tooltip-wrapper .tooltip:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid #141414;
+      top: -10px;
+      left: calc(50% - 7px); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js Cinema</title>
+    <link rel="icon" href="./src/assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/style.css">
+    <!--for production-->
+    <!--
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+    -->
+    <!--for debugging Vue-->
+   <script src="https://unpkg.com/vue"></script>
+  </head>
+  <style>
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <body>
+    <div id="app" class="v-cloak">
+      <keep-alive>
+        <router-view v-bind:genre="genre"
+                   v-bind:time="time"
+                   v-bind:movies="movies"
+                   v-bind:day="day"></router-view>
+      </keep-alive>
+    </div>
+
+    <script src="./node_modules/moment/moment.js"></script>
+    <script src="./node_modules/vue-resource/dist/vue-resource.min.js"></script>
+    <script src="./node_modules/vue-router/dist/vue-router.min.js"></script>
+    <script type="module" src="./src/util/tooltip.js"></script>
+    <script type="module" src="./src/util/helpers.js"></script>
+    <script type="module" src="./src/util/bus.js"></script>
+    <script type="module" src="./src/util/times.js"></script>
+    <script type="module" src="./src/util/genres.js"></script>
+    <script type="module" src="./src/components/MovieItem.js"></script>
+    <script type="module" src="./src/components/CheckFilter.js"></script>
+    <script type="module" src="./src/components/Detail.js"></script>
+    <script type="module" src="./src/components/MovieFilter.js"></script>
+    <script type="module" src="./src/components/MovieList.js"></script>
+    <script type="module" src="./src/components/Overview.js"></script>
+    <script type="module" src="./src/entry.js"></script>
+  </body>
+</html>

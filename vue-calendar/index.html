@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js Calendar</title>
+  <link rel="icon" href="./src/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./src/style.css" media="screen" />
+  <!--for production-->
+  <!--
+  <script src="./node_modules/vue/dist/vue.min.js"></script>
+  -->
+  <!--for debugging Vue-->
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <app></app>
+  </div>
+  <script src="./node_modules/moment/moment.js"></script>
+  <script src="./node_modules/vue-resource/dist/vue-resource.min.js"></script>
+  <script src="./node_modules/vuex/dist/vuex.min.js"></script>
+  <script type="module" src="./src/store/store-states.js"></script>
+  <script type="module" src="./src/components/EventForm.js"></script>
+  <script type="module" src="./src/components/CurrentMonth.js"></script>
+  <script type="module" src="./src/components/CalendarDay.js"></script>
+  <script type="module" src="./src/components/App.js"></script>
+  <script type="module" src="./src/entry.js"></script>
+</body>
+</html>
