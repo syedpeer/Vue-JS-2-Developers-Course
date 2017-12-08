@@ -10,18 +10,6 @@ const vueInstance = new Vue({
     App
   },
   store
-  /*
-  render(createElement){
-    const vnode = createElement(
-      'div',
-      {attrs: {id: 'app'}},
-      [
-        createElement('app')
-      ]
-    );
-    return vnode;
-  }
-  */
 });
 
 vueInstance.$http.get('/events').then((response) => {
